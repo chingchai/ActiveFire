@@ -1,0 +1,34 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="App.css" type="text/css">
+<body>
+<div  style="WIDTH: 35em;
+HEIGHT: 20em;
+margin: 0 auto 0 auto;
+BORDER: 1px solid rgb(0,0,0);
+padding:25px;">
+<form action="selindex.php" method="GET" target="_blank"  >
+	1. เลือกข้อมูลโรค : 
+	<br>
+	<select name="disease" class="input">
+	  <option value="dhf">D.H.F,Total(26,27,66)</option>
+	  <option value="inf">Influenza</option>
+	  <option value="dia">Diarrhoea</option>
+	</select><?php $disease = $_POST['disease']; ?>
+	<p>
+	2. เลือกรูปแบบ : 
+	<br>
+	<input type="radio" name="illtype" value="pill">จำนวนผู้ป่วย(ราย)<br>
+	<input type="radio" name="illtype" value="pilldeath">จำนวนผู้ป่วยตาย(ราย)<br>
+	<input type="radio" name="illtype" value="pilldeathrate">อัตราป่วยตาย<br>
+	<input type="radio" name="illtype" value="pilldeathsand">อัตราป่วยต่อ ปชก.แสนคน
+	<p>	
+	3. เลือกระยะเวลา : 
+	<br><input type="date" name="dstart" class="input" id="indate"></br> 
+	ถึง 
+	<br><input type="date" name="dend" class="input" id="indate"></br> 
+	<p><input type="submit"></p>
+</form>
+</div> 
+</body>
+</html>

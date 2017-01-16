@@ -1,0 +1,88 @@
+* { margin:0; padding:0; }
+body, div, span, p, a, img, ul, ol, li, table, th, tr, td, form, fieldset, legend, dl, dt, dd, blockquote, applet, object { border:0; }
+ul, ol {list-style-type:none}
+body {background: url('../img/bg-repeat.jpg') repeat-x;padding: 0 0 0; font: normal 12px Tahoma,sans-serif; color: #000;}
+p {line-height: 1.9em;padding: 0 0 25px 0;}
+
+/* LINKS ---------------------------------------------------------------------------------------------------------- */
+a {color: #000;text-decoration: underline;}
+a:link {color: #000;}
+a:focus {color: #000; outline: 0}
+a:visited {color: #000}
+a:hover {color: #000;text-decoration: none;}
+a.more {padding-right: 12px; background: url('../img/arrow.gif') no-repeat 100% 55%;display: none;}
+a.button {background: url('../img/button-start.gif') no-repeat;display: none;text-decoration: none;color: #fff;font-weight: bold;}
+a.button span {display: inline-block;height: 33px;line-height: 33px;padding: 0 20px;color: #fff;font-weight: bold;background: url('../img/button-end.gif') no-repeat 100% 0}
+
+/* H1 - H5 -------------------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { margin:15px 0 15px 0; }
+h1 { font-size: 2.4em;font-weight: normal;margin: 0 0 15px; color: #1c2022;}
+h2 { font-size: 1.8em; margin: 0 0 20px; color: #303436;font-weight: normal;}
+h3 { font-size:1.2em;text-transform: uppercase;margin: 10px 0 15px;color: #303436;padding: 0 0 5px;}
+h4 { font-size:1.0em; color: #005e7c }
+h5 { font-size:1.0em; }
+
+img {display: none}
+/* LAYOUT --------------------------------------------------------------------------------------------------------- */
+.wrap {width: 100%}
+    /* HEADER ----------------------------------------------------------------------------------------------------- */
+    #header {display: none}
+        /* logo */
+        a#logo {font-size: 2.5em;color: #fff;font-style: italic;padding: 0 10px;position: relative;top: 30px;text-decoration: none}
+
+        /* navigation */
+        ul#nav {position: absolute;right: 0;top: 30px;}
+            ul#nav li {float:left;}
+                ul#nav li a { padding: 0 15px;height: 32px; line-height: 32px;display: block;text-decoration: none;float: left;font-weight: bold;color: #fff; }
+                ul#nav li:hover,
+                ul#nav li.hover {background: url('../img/nav-start.jpg') no-repeat;}
+                ul#nav li.active { color: #fff;background: url('../img/nav-start.jpg') no-repeat}
+                ul#nav li:hover a,
+                ul#nav li.hover a {background: url('../img/nav-end.jpg') no-repeat 100% 0}
+                ul#nav li.active a {background: url('../img/nav-end.jpg') no-repeat 100% 0}
+
+    #intro {background: #fff;padding: 30px 0 10px;width: 100%}
+    #intro .floatRight {float: none}
+    #intro .photo {display: none}
+    #intro .photo img {position: absolute;top: 11px;left:46px}
+    #intro p {font-size: 1.2em;padding-bottom: 20px}
+    
+    /* COLS ----------------------------------------------------------------------------------------------------------- */
+    ul.cols {margin: 0 0 35px;background: url('../img/cols-bg.gif') repeat-y 50% 0}
+        ul.cols li {width: 100%;float: none;padding: 0 0 20px}
+            ul.cols li.center {text-align: left;}
+                ul.cols li h2 {margin-bottom: 10px;text-transform: uppercase;font-size: 1.2em;font-weight: bold;color: #000;background: none;padding: 0 0 0 0}
+                ul.cols li p {padding: 0 0 10px 0}
+
+
+    .title {display: none;background: url('../img/dot.gif') repeat-x 0 50%;padding: 0 10px;margin:10px 0 25px}
+    .title span {padding: 0 10px;background: #fff}
+    
+  	/* FOOTER ----------------------------------------------------------------------------------------------------- */
+    .footer {background: font-size: 0.9em;background: none}
+        .footer span {color: #87898a;display: block;float: none}
+        .footer span.noprint {display: none}
+        .footer a {color: #87898a;}
+        .footer a.tempixo {display: inline-block;position: relative;width: 110px; height: 28px;line-height: 28px;margin-right: 20px;}
+            .footer a.tempixo span {width: 110px; height: 28px;display: inline-block;cursor: pointer; background: url('../img/tempixo-com.gif') no-repeat;position: absolute; top: 0; left: 0}
+
+
+
+/* OTHER ----------------------------------------------------------------------------------------------------- */
+hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; background:#CCC; color:#CCC;}
+.clear { clear:both; display: block; height:0;line-height:0;font-size:0; width: 100%;}
+.noscreen { display:none; }
+.floatLeft {float: left;}
+.floatRight {float: right;}
+img.floatLeft {margin-right: 20px}
+img.floatRight {margin-left: 20px}
+.noprint {display: none}
+.bold {font-weight: bold;}
+.center {text-align: center;}
+.noborder {border: 0;}
+/* clearfix */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden}
+.clearfix {display: inline-block;}
+/* hidden for ie mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}

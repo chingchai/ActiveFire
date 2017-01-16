@@ -1,0 +1,170 @@
+/* FONTS ---------------------------------------------------------------------------------------------------------- */
+@font-face { 
+  font-family: Yanone Kaffeesatz; 
+    src: url('../fonts/YanoneKaffeesatz-Regular.eot'); 
+    src: local("Yanone Kaffeesatz"), url('../fonts/YanoneKaffeesatz-Regular.ttf'); 
+} 
+
+@font-face { 
+  font-family: News Cycle; 
+    src: url('../fonts/NewsCycle-Regular.eot'); 
+    src: local("News Cycle"), url('../fonts/NewsCycle-Regular.ttf'); 
+} 
+
+@font-face {
+    font-family: thai_sans_literegular;
+    src: url('../fonts/thaisanslite_r1-webfont.eot');
+    src: url('../fonts/thaisanslite_r1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisanslite_r1-webfont.woff') format('woff'),
+         url('../fonts/thaisanslite_r1-webfont.ttf') format('truetype'),
+         url('../fonts/thaisanslite_r1-webfont.svg#thai_sans_literegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* BODY ---------------------------------------------------------------------------------------------------------- */
+* { margin:0; padding:0; }
+body, div, span, p, a, img, ul, ol, li, table, th, tr, td, form, fieldset, legend, dl, dt, dd, blockquote, applet, object { border:0; }
+ul, ol {list-style-type:none}
+body {background: url('../img/bg.png') no-repeat 50% 0;padding: 130px 0 0; font: normal 12px Arial,sans-serif; color: #1c2022;}
+body.homepage {background: url('../img/bg-home.png') no-repeat 50% 0;padding: 100px 0 0;}
+p {line-height: 1.9em;padding: 0 0 25px 0;}
+
+/* LINKS ---------------------------------------------------------------------------------------------------------- */
+a {color: #249138;text-decoration: underline;}
+a:link {color: #249138;}
+a:focus {color: #249138; outline: 0}
+a:visited {color: #249138}
+a:hover {color: #000;text-decoration: none;}
+a.more {padding-right: 12px; background: url('../img/arrow.gif') no-repeat 100% 55%;}
+a.button {background: url('../img/button-start.jpg') no-repeat;display: inline-block;text-decoration: none;color: #fff;font-weight: bold;}
+a.button span {display: inline-block;height: 32px;line-height: 32px;padding: 0 20px;color: #fff;font-weight: bold;background: url('../img/button-end.jpg') no-repeat 100% 0}
+
+/* H1 - H5 -------------------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { margin:15px 0 15px 0; }
+h1 { font-size: 1.8em;font-weight: normal;margin: 0 0 10px; color: #249138;}
+.homepage h1 {color: #fff;font-size: 2.4em;}
+h2 { font-size: 1.6em; margin: 0 0 20px; color: #249138;font-weight: normal;}
+h3 { font-size:1.2em;text-transform: uppercase;margin: 10px 0 15px;color: #249138;padding: 0 0 5px;}
+h4 { font-size:1.0em;margin: 5px 0 10px;color: #249138 }
+
+
+/* LAYOUT --------------------------------------------------------------------------------------------------------- */
+.wrap {width: 930px;margin: 0 auto;position: relative}
+    /* HEADER ----------------------------------------------------------------------------------------------------- */
+    #header {height: 99px;width: 100%;position: absolute;top: 0;left: 0}
+        /* logo */
+        a#logo {font-size: 2.5em;color: #fff;font-style: italic;padding: 0 22px;position: relative;top: 45px;text-decoration: none}
+        a#logo span {color: #107623}
+
+        /* navigation */
+        ul#nav {position: absolute;right: 20px;top: 28px;padding: 0}
+            ul#nav li {float:left;padding: 0 10px;background: none}
+                ul#nav li a { padding: 0 5px;height: 63px; line-height: 63px;text-transform: uppercase;display: block;text-decoration: none;float: left;color: #fff; }
+                ul#nav li a:hover,
+                ul#nav li.active a {border-bottom: 3px solid #59a01b}
+
+    #intro {background: url('../img/bg-intro.jpg') repeat-x bottom;height: 220px;color: #fff;padding: 17px 18px;width: 100%;margin-bottom: 15px}
+    #intro .floatRight {width: 655px}
+    #intro .photo {background: url('../img/image-bg.jpg') no-repeat;width: 253px;height: 167px;float: left}
+    #intro .photo img {position: absolute;top: 11px;left:11px}
+    #intro p {font-size: 1.0em;padding-bottom: 20px}
+    
+    /* COLS ----------------------------------------------------------------------------------------------------------- */
+    .content ul.cols {margin: 0 0 35px;padding: 0;background: url('../img/cols-bg.gif') repeat-y 50% 0}
+        .content ul.cols li {float: left; width: 245px;padding: 5px 0;background: none}
+            .content ul.cols li.center {margin: 0 70px;text-align: left;}
+                .content ul.cols li h2 {margin-bottom: 10px;text-transform: uppercase;font-size: 1.2em;font-weight: bold;color: #249138;padding: 0}
+                .content ul.cols li p {padding: 0 0 10px 0}
+    .content ul {padding: 5px 10px 25px}
+    .content ul li {padding: 3px 0 3px 15px;background: url('../img/li.jpg') no-repeat 0 50%}
+	 
+	  .content2 ul.cols {margin: 0 0 35px;padding: 0;background: url('../img/cols-bg.gif') repeat-y 50% 0}
+        .content2 ul.cols li {float: left; width: 245px;padding: 5px 0;background: none}
+            .content2 ul.cols li.center {margin: 0 70px;text-align: left;}
+                .content2 ul.cols li h2 {margin-bottom: 10px;text-transform: uppercase;font-size: 1.2em;font-weight: bold;color: #249138;padding: 0}
+                .content2 ul.cols li p {padding: 0 0 10px 0}
+    .content2 ul {padding: 5px 10px 25px}
+    .content2 ul li {padding: 3px 0 3px 15px;background: url('../img/li.jpg') no-repeat 0 50%}
+
+    .container {padding: 0 20px;width: 890px}
+	 .container2 {padding: 0 20px;width: 1250px}
+    .content {width: 640px;float: right}
+	 .content2 {width: 1000px;float: right}
+    .homepage .content {width: 890px;float: none}
+	 .homepage .content2 {width: 1000px;float: none}
+    .breadcrumb {font-size: 0.9em;color: #aaa2a2;padding-top: 5px;padding-bottom: 15px}
+    .breadcrumb span {color: #3e3c3c}
+    
+	 /* === Table Original === */
+    /*table {width: 100%;border-collapse: collapse;border: 1px solid #efefef;margin-bottom: 15px}
+    table th {text-align: left;padding: 10px;border: 1px solid #249138;border-bottom: 3px solid #efefef;background: #249138;color: #fff}
+    table td {padding: 7px 10px;border: 1px solid #efefef}
+    table .dark td {background: #f7f7f7}*/
+	 
+    table {width: 100%;border-collapse: collapse;border: 1px solid #efefef;margin-bottom: 15px}
+    table th {text-align: center;padding: 2px;border: 1px solid #249138;border-bottom: 3px solid #efefef;background: #249138;color: #fff}
+    table td {padding: 7px 10px;border: 1px solid #efefef}
+    table .dark td {background: #f7f7f7}
+	 
+    form {background: url('../img/form-bg.jpg') repeat-y;margin-bottom: 20px}
+    form fieldset {background: #f7f7f7;padding: 5px 2px;border: 1px solid #efefef}
+    form table {width: 100%;border: 0;margin: 0}
+    form th {padding: 10px 0 10px 0;border: 0;background: none;color: #000;text-align: left;width: 20%;vertical-align: top}
+    form td {padding: 5px 20px 5px 0;width: 80%;border: 0}
+    /*form .text {padding: 5px;width: 250px;}*/
+		form .text {padding: 5px;width: 199px;}
+		/*form .select {padding: 5px;height:8px;}*/
+    form .textarea {padding: 5px;width:438px;height:58px;}
+    form .checkbox {width: 20px;height: 20px;float: left;position: relative;top: -4px;margin-right: 2px}
+    form .radio {width: 20px;height: 20px;float: left;position: relative;top: -5px;margin-right: 2px}
+    form tfoot td {padding-top: 10px}
+    form .submit {cursor: pointer;padding: 5px 10px;font-weight: bold;text-transform: uppercase;font-family: Arial;font-size: 1.0em;}
+                    
+    .title {display: block;background: url('../img/dot.gif') repeat-x 0 50%;padding: 0 10px;margin:10px 0 25px}
+    .title span {padding: 0 10px;background: #fff}
+    
+    .sidebar {float: left;width: 203px}
+    .sidebar h3 {text-transform: none;background: url('../img/box-title.jpg') no-repeat;font-size: 1.2em;margin: 0;padding: 0 10px;height: 40px;color: #3e3c3c;line-height: 40px}
+    .sidebar .box {background: url('../img/box-bg.jpg') repeat-y}
+    .sidebar .box .in {background: url('../img/box-btm.jpg') no-repeat bottom;padding: 5px 15px}
+    .sidebar .box ul li a {display: block;color: #107623;text-transform: uppercase;padding: 7px 0;font-size: 0.9em}     
+    
+  	/* FOOTER ----------------------------------------------------------------------------------------------------- */
+    .footer {background: #e9e9e9 url('../img/bg-footer.jpg') no-repeat;height: 58px; line-height: 58px;padding: 0 20px;font-size: 0.9em; margin: 25px auto 20px;width: 890px;;clear: both; overflow: hidden;}
+        .footer span {color: #87898a;display: block;}
+        .footer a {color: #87898a;}
+        .footer a.tempixo {display: inline-block;position: relative;width: 110px; height: 28px;line-height: 28px;margin-right: 20px;}
+            .footer a.tempixo span {width: 110px; height: 28px;display: inline-block;cursor: pointer; background: url('../img/tempixo-com.gif') no-repeat;position: absolute; top: 0; left: 0}
+
+
+
+/* OTHER ----------------------------------------------------------------------------------------------------- */
+hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; background:#CCC; color:#CCC;}
+.clear { clear:both; display: block; height:0;line-height:0;font-size:0; width: 100%;}
+.noscreen { display:none; }
+.floatLeft {float: left;}
+.floatRight {float: right;}
+img.floatLeft {margin-right: 20px}
+img.floatRight {margin-left: 20px}
+
+.bold {font-weight: bold;}
+.center {text-align: center;}
+.noborder {border: 0;}
+/* clearfix */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden}
+.clearfix {display: inline-block;}
+/* hidden for ie mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* THAI ----------------------------------------------------------------------------------------------------- */
+thais {padding: 0 15px 20px 0; font: 18px 'thai_sans_literegular'; text-shadow:  #FFF 1px 1px; margin: 0 1px; color: #000; text-align: justify;}
+thaiss {padding: 0 15px 20px 0; font: 16px 'thai_sans_literegular'; text-shadow:  #FFF 1px 1px; margin: 0 1px; color: #000; text-align: justify;}
+thaisss {padding: 0 15px 20px 0; font: 14px 'thai_sans_literegular'; text-shadow:  #FFF 1px 1px; margin: 0 1px; color: #000; text-align: justify;}
+
+thainh {padding: 0 15px 22px 0; font: 'thai_sans_literegular';}
+thai {padding: 0 15px 20px 0; font: 'thai_sans_literegular'; text-shadow:  #FFF 1px 1px;}
+thaih {padding: 0 15px 20px 0; font: 20px 'thai_sans_literegular'; text-shadow:  #FFF 1px 1px;}
+
+
+thaist {padding: 0 15px 20px 0; font: 18px 'thai_sans_literegular'; text-shadow:  #BBB 1px 1px; margin: 0 1px; color: #000; text-align: justify;}
