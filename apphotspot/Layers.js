@@ -51,6 +51,8 @@ Heron.scratch.urls = {
   OWS2: 'http://ows.gistda.or.th/geoserver/ows?',
   OWS3: 'http://www.map.nu.ac.th/geoserver-hgis/ows?',
   GS2_OWS: 'http://kademo.nl/gs2/ows?',
+
+  NASAOWS: 'https://firms.modaps.eosdis.nasa.gov/wmsc6/?',
 };
 
 Heron.scratch.layermap = {
@@ -156,6 +158,24 @@ Heron.scratch.layermap = {
         ),
 // Climate layers
 
+MODIS_Hotspots: new OpenLayers.Layer.WMS(
+        "fires24",
+        Heron.scratch.urls.NASAOWS,
+        {layers: "fires48", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true, opacity: 0.7,
+          featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    featurePrefix: 'heron',
+                    featureNS: 'http://heron-mc.org',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }}
+  ),
+
+
+
 /*
  * Aardbevingen
  *  KNMI Aardbevingen: vanuit http://www.knmi.nl/seismologie/aardbevingen-nederland.html
@@ -228,6 +248,7 @@ timslider: new OpenLayers.Layer.WMS(
 Heron.options.map.layers = [
   //add overlay1
   Heron.scratch.layermap.knmi,
+  Heron.scratch.layermap.MODIS_Hotspots,
 
   //add overlay2
 	Heron.scratch.layermap.prov,
@@ -269,6 +290,7 @@ var treeTheme = [
 					expanded: true,
 					children:
 						[
+              {nodeType: "gx_layer", layer: "fires24", text: "MODIS_Hotspots", legend: true},
               {nodeType: "gx_layer", layer: "v_all_dengue_timslider_pnt", text: "v_all_dengue", legend: true},
               {nodeType: "gx_layer", layer: "v_all_dengue_timslider", text: "v_all_dengue_timslider", legend: true},
               {nodeType: "gx_layer", layer: "KNMI Aardbevingen", text: "KNMI Aardbevingen", legend: true},

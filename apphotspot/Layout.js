@@ -244,7 +244,7 @@ Heron.layout = {
                     							html: '<div id="slider-container" style="margin-left:2px;width:100%;border:none;">'+
 																	'<div id="sliderbar" style="position: relative; top: 0px;margin: 0px; h-align: center; width: 100%;height: 100%;border:none;">'+
 																	'</div></div><form id="timeslide"><input type="hidden" id="datStart" value="x"/></form>',
-																	layerNames: ['KNMI Aardbevingen'],
+																	layerNames: ['v_all_dengue_timslider','v_all_dengue_timslider_pnt'],
 																	timelineStartYear: 2008,
 																	timelineEndYear: 2020,
 																	timelineCenterDate: '2016-02-01',
