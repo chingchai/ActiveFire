@@ -23,3 +23,6 @@ Import Active Fire Data into PostgreSQL/PostGIS Database
 - proj4js
 - OpenLayers 2
 - ExtJS and GeoExt
+
+# Screenshot
+![screenshot](https://raw.githubusercontent.com/chingchai/ActiveFire/master/apphotspot/img/app1.png "ActiveFire")
