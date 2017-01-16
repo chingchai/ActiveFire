@@ -1,7 +1,11 @@
-/** api: example[timeslider]
- *  TimeSlider
- *  ----------
- *  Show time-based Layer data via WMS Time using a timeslider.
+/* Hotspot fire app
+ * Mr Chingchai Humhong
+ * Assoc Prof Dr Chada Narongrit
+ * 16/01/2017
+ * chada@nu.ac.th, chingchai.h@gmail.com, chingchaih@nu.ac.th
+ * GISTNU @ Naresuan University
+ * MIT@License
+ * github : https://github.com/chingchai/ActiveFire
  */
 Ext.namespace("Heron");
 Ext.namespace("Heron.options.map");
@@ -199,23 +203,6 @@ Heron.layout = {
 									// Optional, use internal default if not set
 									hropts: Heron.options.layertree
 								},
-								{
-									xtype: 'hr_htmlpanel',
-									id: 'hr-info-west',
-									border: true,
-									html: Heron.options.menu.html,
-									preventBodyReset: true,
-									title: 'Drought Monitor'
-								},
-								/*{
-									xtype: 'hr_htmlpanel',
-									id: 'hr-info-west',
-									border: true,
-									html: Heron.options.info.html,
-									preventBodyReset: true,
-									title: 'Drought Forecast'
-								},*/
-
 							]
 						},{
 							/** Map and Feature Info panel area. */
@@ -244,22 +231,21 @@ Heron.layout = {
                     							html: '<div id="slider-container" style="margin-left:2px;width:100%;border:none;">'+
 																	'<div id="sliderbar" style="position: relative; top: 0px;margin: 0px; h-align: center; width: 100%;height: 100%;border:none;">'+
 																	'</div></div><form id="timeslide"><input type="hidden" id="datStart" value="x"/></form>',
-																	layerNames: ['v_all_dengue_timslider','v_all_dengue_timslider_pnt'],
-																	timelineStartYear: 2008,
+																	layerNames: ['fire_heatmap','fire_archive'],
+																	timelineStartYear: 2000,
 																	timelineEndYear: 2020,
-																	timelineCenterDate: '2016-02-01',
+																	timelineCenterDate: '2015-02-01',
 																	timelineDayWidth: 1,
 																	timelineZoom: true,
 																	filterTitle: 'Filter op periode:',
-																	filterStartDate: '2016-12-27',
-																	filterEndDate: '2017-01-03',
+																	filterStartDate: '2015-01-27',
+																	filterEndDate: '2015-02-11',
 																	height: 45,
 																	header: true,
 																	collapsible: false,
 																	collapsed: false,
 																	padding: '0px'
 									}
-
 							]
 						}
 					]
