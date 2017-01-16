@@ -1,3 +1,12 @@
+/* Hotspot fire app
+ * Mr Chingchai Humhong
+ * Assoc Prof Dr Chada Narongrit
+ * 16/01/2017
+ * chada@nu.ac.th, chingchai.h@gmail.com, chingchaih@nu.ac.th
+ * GISTNU @ Naresuan University
+ * MIT@License
+ * github : https://github.com/chingchai/ActiveFire
+ */
 Heron.examples.searchPanelConfig = {
     xtype: 'hr_multisearchcenterpanel',
     height: 600,
@@ -80,7 +89,7 @@ Heron.examples.searchPanelConfig = {
     ]
 };
 
-Heron.options.map.toolbar = [    
+Heron.options.map.toolbar = [
     {type: "baselayer", options: {width: 150, listWidth: 160}},
     {type: "scale"},
 	{type: "-"} ,
@@ -135,32 +144,7 @@ Heron.options.map.toolbar = [
     {type: "zoomprevious"},
     {type: "zoomnext"},
     {type: "-"},
-// Use "geodesic: true" for non-linear/Mercator projections like Google, Bing etc 
+// Use "geodesic: true" for non-linear/Mercator projections like Google, Bing etc
     {type: "measurelength", options: {geodesic: false}},
     {type: "measurearea", options: {geodesic: false}}
 ];
-
-// The content of the HTML info panel.
-Ext.namespace("Heron.options.info");
-Heron.options.info.html =
-        '<div class="hr-html-panel-body">' +
-            '<p>การจัดการข้อมูลแผนที่</p>' +
-                '<ul>' +
-                '<li><a href="#" target="_new"><b>เพิ่มชั้นข้อมูล</b></a> : ทำการเพิ่มชั้นข้อมูล</li>' +
-                '<li><a href="#" target="_new"><b>แก้ไขชั้นข้อมูล</b></a> : ทำการแก้ไขชั้นข้อมูล</li>' +
-                '<li><a href="#" target="_new"><b>ลบชั้นข้อมูล</b></a> : ทำการลบชั้นข้อมูล</li>' +
-                '</ul>' +
-        '</div>';
-	
-Ext.namespace("Heron.options.menu");
-Heron.options.menu.html =
-   '<div class="hr-html-panel-body">' +
-   '<iframe src="http://www.wearehappy.sci.nu.ac.th/MM/ol/mm/send_noti/index.php" style="border:none; width: 100%; height: 100%"></iframe>'
-	
-   
-    '</div>';
-	
-/*
- * Values for BookmarksPanel (bookmarks to jump to specific
- * layers/zoom/center on map. 
- */		
