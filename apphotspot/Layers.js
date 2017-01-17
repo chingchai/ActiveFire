@@ -54,9 +54,8 @@ Heron.options.wfs.downloadFormats = [
 ];
 
 Heron.scratch.urls = {
-	OWS: 'http://www2.cgistln.nu.ac.th/geoserver/ows?',
+	OWS: 'http://www2.cgistln.nu.ac.th/geoserver-fire/ows?',
   OWS2: 'http://ows.gistda.or.th/geoserver/ows?',
-  OWS3: 'http://www.map.nu.ac.th/geoserver-fire/ows?',
 };
 
 Heron.scratch.layermap = {
@@ -142,11 +141,11 @@ Heron.scratch.layermap = {
                     }
                 }}
         ),
-hotspot: new OpenLayers.Layer.WMS(
-          "fire_archive",
-          Heron.scratch.urls.OWS3,
-          {layers: "fire:fire_archive", transparent: true, format: 'image/png'},
-          {singleTile: false, opacity: 0.9, isBaseLayer: false, visibility: false, noLegend: false,
+modis_hotspot: new OpenLayers.Layer.WMS(
+          "v_modis_pnt",
+          Heron.scratch.urls.OWS,
+          {layers: "activefire:v_modis_pnt", transparent: true, format: 'image/png'},
+          {singleTile: false, opacity: 0.9, isBaseLayer: false, visibility: true, noLegend: false,
             featureInfoFormat: 'application/vnd.ogc.gml', transitionEffect: 'null', metadata: {
               wfs: {
                   protocol: 'fromWMSLayer',
@@ -154,11 +153,11 @@ hotspot: new OpenLayers.Layer.WMS(
               }
           }}
   ),
-heatmap: new OpenLayers.Layer.WMS(
-          "fire_heatmap",
-          Heron.scratch.urls.OWS3,
-          {layers: "fire:fire_heatmap", transparent: true, format: 'image/png'},
-          {singleTile: true, opacity: 0.9, isBaseLayer: false, visibility: false, noLegend: false,
+modis_heatmap: new OpenLayers.Layer.WMS(
+          "v_modis_heat",
+          Heron.scratch.urls.OWS,
+          {layers: "activefire:v_modis_heat", transparent: true, format: 'image/png'},
+          {singleTile: true, opacity: 0.9, isBaseLayer: false, visibility: true, noLegend: false,
             featureInfoFormat: 'application/vnd.ogc.gml', transitionEffect: 'null', metadata: {
               wfs: {
                   protocol: 'fromWMSLayer',
@@ -167,6 +166,30 @@ heatmap: new OpenLayers.Layer.WMS(
           }}
   ),
 
+  npp_hotspot: new OpenLayers.Layer.WMS(
+            "v_npp_viirs_pnt",
+            Heron.scratch.urls.OWS,
+            {layers: "activefire:v_npp_viirs_pnt", transparent: true, format: 'image/png'},
+            {singleTile: false, opacity: 0.9, isBaseLayer: false, visibility: true, noLegend: false,
+              featureInfoFormat: 'application/vnd.ogc.gml', transitionEffect: 'null', metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }}
+    ),
+  npp_heatmap: new OpenLayers.Layer.WMS(
+            "v_npp_viirs_heat",
+            Heron.scratch.urls.OWS,
+            {layers: "activefire:v_npp_viirs_heat", transparent: true, format: 'image/png'},
+            {singleTile: true, opacity: 0.9, isBaseLayer: false, visibility: true, noLegend: false,
+              featureInfoFormat: 'application/vnd.ogc.gml', transitionEffect: 'null', metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }}
+    ),
 /*    dist: new OpenLayers.Layer.WMS(
           "_nddi",
          'http://129.174.131.10/cgi-bin/mapserv?',
@@ -194,8 +217,10 @@ Heron.options.map.layers = [
 	Heron.scratch.layermap.prov,
   Heron.scratch.layermap.amp,
   Heron.scratch.layermap.tam,
-  Heron.scratch.layermap.heatmap,
-  Heron.scratch.layermap.hotspot,
+  Heron.scratch.layermap.modis_heatmap,
+  Heron.scratch.layermap.modis_hotspot,
+  Heron.scratch.layermap.npp_heatmap,
+  Heron.scratch.layermap.npp_hotspot,
 	//BaseLayers
   Heron.scratch.layermap.gter,
   Heron.scratch.layermap.osm,
@@ -223,12 +248,21 @@ var treeTheme = [
               {nodeType: "gx_layer", layer: "tambon", text: "ขอบเขตตำบล", legend: true},
 						]
 				},{
-					text:'ชั้นข้อมูลจุดความร้อน MODIS',
+					text:'MODIS (MCD14DL)',
 					expanded: true,
 					children:
 						[
-              {nodeType: "gx_layer", layer: "fire_archive", text: "จุดความร้อน", legend: true},
-              {nodeType: "gx_layer", layer: "fire_heatmap", text: "Heatmap", legend: true},
+              {nodeType: "gx_layer", layer: "v_modis_pnt", text: "MODIS Hotspot", legend: true},
+              {nodeType: "gx_layer", layer: "v_modis_heat", text: "MODIS Heatmap", legend: true},
+
+						]
+				},{
+					text:'VIIRS 375 m (VNP14IMGTDL_NRT)',
+					expanded: true,
+					children:
+						[
+              {nodeType: "gx_layer", layer: "v_npp_viirs_pnt", text: "VIIRS Hotspot", legend: true},
+              {nodeType: "gx_layer", layer: "v_npp_viirs_heat", text: "VIIRS Heatmap", legend: true},
 
 						]
 				}
