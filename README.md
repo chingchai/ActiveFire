@@ -25,4 +25,4 @@ Import Active Fire Data into PostgreSQL/PostGIS Database
 - ExtJS and GeoExt
 
 # Screenshot
-![screenshot](https://raw.githubusercontent.com/chingchai/ActiveFire/master/apphotspot/img/app1.png "ActiveFire")
+![screenshot](https://raw.githubusercontent.com/chingchai/ActiveFire/master/apphotspot/img/app2.png "ActiveFire")
