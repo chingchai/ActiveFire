@@ -11,8 +11,8 @@ Ext.namespace("Heron.options");
 Ext.namespace("Heron.scratch");
 Ext.namespace("Heron.examples");
 OpenLayers.Util.onImageLoadErrorColor = "transparent";
-OpenLayers.ProxyHost = "resources/proxy.php?url=";
-//OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
+//OpenLayers.ProxyHost = "resources/proxy.php?url=";
+OpenLayers.ProxyHost = "/cgi-bin/proxy.cgi?url=";
 OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
 Ext.BLANK_IMAGE_URL = 'http://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/resources/images/default/s.gif';
 
@@ -245,24 +245,24 @@ var treeTheme = [
 						[
 							{nodeType: "gx_layer", layer: "provice", text: "ขอบเขตจังหวัด", legend: true},
               {nodeType: "gx_layer", layer: "amphoe", text: "ขอบเขตอำเภอ", legend: true},
-              {nodeType: "gx_layer", layer: "tambon", text: "ขอบเขตตำบล", legend: true},
+              {nodeType: "gx_layer", layer: "tambon", text: "ขอบเขตตำบล", legend: true}
 						]
 				},{
-					text:'MODIS (MCD14DL)',
+					text:'MODIS(MCD14DL)',
 					expanded: true,
 					children:
 						[
               {nodeType: "gx_layer", layer: "v_modis_pnt", text: "MODIS Hotspot", legend: true},
-              {nodeType: "gx_layer", layer: "v_modis_heat", text: "MODIS Heatmap", legend: true},
+              {nodeType: "gx_layer", layer: "v_modis_heat", text: "MODIS Heatmap", legend: true}
 
 						]
 				},{
-					text:'VIIRS 375 m (VNP14IMGTDL_NRT)',
+					text:'VIIRS375m(VNP14IMGTDL_NRT)',
 					expanded: true,
 					children:
 						[
               {nodeType: "gx_layer", layer: "v_npp_viirs_pnt", text: "VIIRS Hotspot", legend: true},
-              {nodeType: "gx_layer", layer: "v_npp_viirs_heat", text: "VIIRS Heatmap", legend: true},
+              {nodeType: "gx_layer", layer: "v_npp_viirs_heat", text: "VIIRS Heatmap", legend: true}
 
 						]
 				}
