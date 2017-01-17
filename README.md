@@ -18,7 +18,7 @@ Import Active Fire Data into PostgreSQL/PostGIS Database
 - MS4W
 - JAVA JDK
 - Tomcat 8
-- GeoServer
+- GeoServer 2.7.1
 - Heron-MC
 - proj4js
 - OpenLayers 2
