@@ -248,7 +248,7 @@ var treeTheme = [
               {nodeType: "gx_layer", layer: "tambon", text: "ขอบเขตตำบล", legend: true}
 						]
 				},{
-					text:'MODIS(MCD14DL)',
+					text:'MODIS (MCD14DL)',
 					expanded: true,
 					children:
 						[
@@ -257,7 +257,7 @@ var treeTheme = [
 
 						]
 				},{
-					text:'VIIRS375m(VNP14IMGTDL_NRT)',
+					text:'VIIRS 375m (VNP14IMGTDL_NRT)',
 					expanded: true,
 					children:
 						[

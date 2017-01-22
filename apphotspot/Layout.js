@@ -12,7 +12,6 @@ Ext.namespace("Heron.options.map");
 Ext.namespace("Heron.options");
 Ext.namespace("Heron.scratch");
 Ext.namespace("Heron.examples");
-
 Ext.namespace("Heron.geoportal");
 Heron.geoportal.menuItems = [
 	{
